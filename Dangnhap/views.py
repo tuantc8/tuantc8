@@ -11,6 +11,6 @@ def xuly_dangnhap(request):
     mk = request.GET.get('matkhau')
     dulieu = NguoiDung.objects.filter(ten_dang_nhap = ten, mat_khau=mk)
     if (dulieu.exists()):
-        return render(request,'themnhanvien.html')
+        return render(request,'thanhcong.html')
     else:
         return render(request,'thatbai.html')
